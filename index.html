@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Paulita Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paula Zuluaga – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="lightbox-overlay" role="dialog" aria-modal="true">
+  <img src="" alt="Expanded view">
+</div>
+  <header>
+    <h1>Paula Zuluaga</h1>
+    <p>Get to know me!</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#favorites">Favorites</a>
+    <a href="#gallery">Photos</a>
+    <a href="#favorite-artist">My Favorite Artist</a>
+    <a href="#dynamic">Inspo</a>
+  </nav>
+
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Paula Zuluaga, a high school senior passionate about creativity, art, and communication. I enjoy learning and exploring new things for my career and life.</p>
+    </section>
+
+    <section id="favorites">
+      <h2>Favorites</h2>
+      <ul>
+        <li>🎨 Favorite Color: Red, green and orange</li>
+        <li>🎧 Favorite Music: Jazz and salsa</li>
+        <li>📚 Favorite Hobby: Painting</li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Photos!</h2>
+      <p>Some photos from random things:</p>
+      <div class="gallery-grid">
+        <img src='https://i.postimg.cc/Q9PHjSgH/Mi-hija.jpg' border='0' alt='Mi bb'>
+        <img src="https://i.postimg.cc/7bkLnCsv/Costume.jpg" border='0' alt="Costume">
+        <img src="https://i.postimg.cc/v4z7GF4T/the.jpg" alt="Me at the ???">
+      </div>
+    </section>
+
+    <section id="favorite-artist">
+    <h2>My Favorite Artist</h2>
+    <figure>
+      <img src="https://i.scdn.co/image/ab67616100005174c435b23f5418493eb5937bc2" alt="Artist Name performing live">
+      <figcaption>'Laufey'</figcaption>
+    </figure>
+    <p>I love the energy and style of <strong>LAUFEY</strong>. One of their songs I recommend is <a href="https://youtu.be/obLSGG-oEyw?si=mqDJxlmVX8uqwbww" target="_blank" rel="noopener noreferrer">"Lover Girl"</a>.</p>
+  </section>
+
+    <section id="video">
+      <h2>My Favourite Music!</h2>
+      <iframe title="Paula Zuluaga's Video" src="https://www.youtube.com/embed/your_video_id_here" allowfullscreen></iframe>
+    </section>
+
+    <section id="dynamic">
+      <h2>Daily Inspo</h2>
+      <div class="api-box">
+        <div>
+          <strong>Quote of the Day:</strong>
+          <p id="quote">Loading...</p>
+        </div>
+        <div>
+          <strong>Fun Fact:</strong>
+          <p id="fact">Loading...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script>
+  // Updated Quote API fetch
+  fetch('https://dummyjson.com/quotes/random')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('quote').textContent = `${data.quote} — ${data.author}`;
+    });
+
+  // Fun Fact API (unchanged)
+  fetch('https://uselessfacts.jsph.pl/random.json?language=en')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('fact').textContent = data.text;
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
