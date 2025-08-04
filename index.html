@@ -68,7 +68,7 @@
   </section>
 
     <section id="video">
-      <h2>My Favourite Music!</h2>
+      <h2>My Video!</h2>
       <iframe title="Paula Zuluaga's Video" src="https://www.youtube.com/embed/your_video_id_here" allowfullscreen></iframe>
     </section>
 
@@ -95,7 +95,7 @@
       document.getElementById('quote').textContent = `${data.quote} — ${data.author}`;
     });
 
-  // Fun Fact API (unchanged)
+  // Fun Fact API 
   fetch('https://uselessfacts.jsph.pl/random.json?language=en')
     .then(res => res.json())
     .then(data => {
